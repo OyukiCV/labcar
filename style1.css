@@ -12,6 +12,33 @@
     background-color: white;
     box-shadow: 0px 1px 5px #302f2f;
 }
+.menu-horizontal{
+    display: none;
+}
+.checkbox__hack {
+    display: none;
+}
+
+.checkbox__hack:checked~.nav--top {
+    overflow: visible;
+}
+
+.checkbox__hack:checked~.nav--top::after {
+    content: "☰";
+}
+
+.checkbox-hack__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 52.8px;
+    color: white;
+    overflow: visible;
+    cursor: pointer;
+    margin: 0;
+}
 
 .logo-menu {
     margin-left: 5%;
@@ -84,31 +111,6 @@
     height: 80px;
     /*background-color: white;*/
 }
-.checkbox__hack {
-    display: none;
-}
-
-.checkbox__hack:checked~.nav--top {
-    overflow: visible;
-}
-
-.checkbox__hack:checked~.nav--top::after {
-    content: "☰";
-}
-
-.checkbox-hack__label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    height: 52.8px;
-    color: white;
-    overflow: visible;
-    cursor: pointer;
-    margin: 0;
-    z-index: 100;
-}
 
 
 .hero {
@@ -127,7 +129,9 @@
     width: 78%;
     height:47%;
 }
-
+.box-yellow-desktop{
+    display: none;
+}
 p.uno {
     font-family: "Arial";
     font-size: 2rem;
@@ -162,6 +166,10 @@ p.uno {
 .encuadre {
     border: 2px solid #FFF;
     margin: 3em 2em 2em;
+}
+
+.encuadre-web{
+    display: none;
 }
 .celular {
     padding: 0 0 4rem;
@@ -279,6 +287,13 @@ p.uno {
     margin: 2rem 0 25%;
    
 }
+
+.map{
+    display: none;
+}
+.mapa-web{
+    display: none;
+}
 .centrado {
     text-align: center;
 }
@@ -302,6 +317,9 @@ ul {
     display: flex;
     flex-direction: row;
 }
+.sub-footer-web{
+    display: none;
+}
 .opciones-menu-footer {
     font-family: "Arial";
     font-size: 1rem;
@@ -317,7 +335,7 @@ figure{
   display: inline-flex;
   margin: 1.5rem 0 2rem;
 }
-img.iconos-img{
+.iconos-img{
     width: 65%;
 }
 .play-store{
@@ -333,15 +351,191 @@ img.iconos-img{
     text-align: center;
 }
 
+
 @media (min-width:608px){
+    .menu{
+        justify-content: flex-start;
+    }
+    .nav--top{
+        display: none;
+    }
+    .logo-menu{
+        width: 15%;
+    }
+    .menu-horizontal {
+        font-family: "Arial";
+        font-size: 1.2rem;
+        text-align: right;
+        margin-top: 2rem;
+    }
+    .menu-lista {
+        display: inline;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
     .hero {
         background-size: cover;
         background-repeat: no-repeat;
-        width: 100vw;
+        width: 98vw;
         height: 75vh;
         background-position: -50% bottom;
+    }
+    .box-yellow{
+        display: none;
     }
     .uno{
         display: none;
     }
+    .box-yellow-desktop{
+        display: initial;
+        background-color:#f7b617;
+        width: 41%;
+        height:45%;
+    }
+    .uno-desktop{
+        font-family: "Arial";
+        font-size: 1.2rem;
+        color: white;
+        margin: 1.2em 1.2em 0.5em;
+    }
+    .sub-uno-desktop {
+        font-family: "Arial";
+        font-size: .85rem;
+        color: white;
+        margin-left: 1.5rem;
+        margin-right: 1rem;
+    }
+    .logo-labcar-desktop {
+        width: 25%;
+        margin-left: 0.5rem;
+    }
+    .registro {
+        font-family: "Arial";
+        font-size: .65rem;
+        color: white;
+        margin-left: 1.5rem;
+        padding: .9rem 0 0;
+    }
+    .labcar-desktop {
+        font-family: "Arial";
+        font-size: .8rem;
+        padding: .5rem .8rem;
+        border: none;
+        border-radius: 5px;
+        background: white;
+        margin: 0 0 0 7%;
+    }
+    .encuadre{
+        display: none;
+    }
+    .dos, .dos-subtexto{
+        display: none;
+    }
+   
+    .encuadre-web {
+        border-top: 2px solid #FFF;
+        border-right: 2px solid #FFF;
+        border-bottom: 2px solid #FFF;
+        border-left: none;
+        margin: 2em 20% 2em 0;
+        display: flex;
+    }
+    .txt-conduce-web {
+        font-family: "Arial";
+        font-size: 1.6rem;
+        color: white;
+        margin-left: 0.5em;
+        margin-top: 3em;
+    }
+    .celular-web {
+        padding: 3rem 0rem 3rem 10%;
+        width: 50%;
+    }
+    .texto {
+        line-height: 130%;
+        padding-left: 2rem;
+        margin-top: 2%;
+        text-align: left;
+    }
+    .app-descarga {
+        font-family: "Arial";
+        font-size: 1.2rem;
+        color: white;
+        margin: 2em 0 1em;
+    }
+    .texto-web {
+        font-family: "Arial";
+        font-size: 1rem;
+        color: white;
+        margin: 2em 0 1em;
+    }
+    .info-conduce {
+        height: 60vh;
+        width: 98vw;
+        background-position: bottom;
+        justify-content: flex-end;
+    }
+    .opaco{
+        width: 40%;
+    }
+    .txt-conduce{
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        margin-top:30%;
+    }
+
+    .txt-opcion {
+        font-size: 1rem;
+        margin-left: 1em;
+    }
+    .button-conductor {
+        font-size: .9rem;
+        padding: 0.6rem 1rem;
+        margin: 1.2em 0 0 1rem;
+    }
+    .tarifas{
+        flex-direction: row;
+    }
+    .izq-web{
+       width: 50%;
+    }
+    .mapa {
+        text-align: center;
+        border: 2px solid white;
+        margin: 5%;
+        
+    }
+    
+    .mapa-web {
+        display: initial;
+        margin: 1rem;
+        width: 80%;
+    }
+    .logo-blanco{
+        width: 20%;
+    }
+    .menu-footer {
+        display: none;
+
+    }
+    .sub-footer-web{
+        display: flex;
+    }
+  
+    .margen-top{
+        margin-top: 90%;
+    }
+    .icons-apps {
+        margin-top: 25rem;
+    }
+  
+    .stores {
+        margin-top: 50%;
+    }
+    .play-store{
+        width: 60%;
+    }
+
+
 }
